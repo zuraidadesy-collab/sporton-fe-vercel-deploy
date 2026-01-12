@@ -4,40 +4,52 @@ import { FiPlus } from "react-icons/fi";
 
 const ProductsList = [
   {
-    name: "Sports On Product 1",
-    category: "Running",
-    imgUrl: "product-1.png",
-    price: 450000,
-  },
-  {
-    name: "Sports On Product 2",
-    category: "Running",
-    imgUrl: "product-2.png",
-    price: 250000,
-  },
-  {
-    name: "Sports On Product 3",
+    name: "SportsOn Hyperfast Shoes",
     category: "Running",
     imgUrl: "product-3.png",
-    price: 450000,
+    price: 329000,
   },
   {
-    name: "Sports On Product 4",
+    name: "SportsOn Rockets Tennis",
+    category: "Tennis",
+    imgUrl: "product-2.png",
+    price: 999000,
+  },
+  {
+    name: "SportsOn Slowlivin",
     category: "Running",
-    imgUrl: "product-4.png",
-    price: 230000,
+    imgUrl: "product-1.png",
+    price: 119000,
   },
   {
-    name: "Sports On Product 5",
+    name: "SportsOn HyperSoccer v2",
+    category: "Football",
+    imgUrl: "product-4.png",
+    price: 458000,
+  },
+  {
+    name: "SportsOn Basketball",
+    category: "Football",
+    imgUrl: "product-6.png",
+    price: 458000,
+  },
+  {
+    name: "SportsOn Slowlivin",
     category: "Running",
     imgUrl: "product-5.png",
-    price: 440000,
+    price: 119000,
   },
   {
-    name: "Sports On Product 6",
+    name: "SportsOn Hyperfast Shoes",
     category: "Running",
-    imgUrl: "product-6.png",
-    price: 650000,
+    imgUrl: "product-8.png",
+    price: 329000,
+  },
+  {
+    name: "SportsOn Rockets Tennis",
+    category: "Tennis",
+    imgUrl: "product-7.png",
+    price: 999000,
   },
 ];
 
