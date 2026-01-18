@@ -7,7 +7,7 @@
   --primary-light: #F4EBEB;
 }
 
-@theme inline {
+@theme {
   --color-dark: var(--dark);
   --color-dark-alternate: var(--dark-alternate);
   --color-primary: var(--primary);
@@ -21,4 +21,18 @@ html {
 
 * {
   @apply font-poppins;
+}
+
+/* INPUT GROUP */
+.input-group {
+  @apply mb-5;
+}
+
+.input-group label {
+  @apply block text-xs mb-1;
+}
+
+.input-group input,
+.input-group textarea {
+  @apply px-4 py-2.5 bg-gray-100 w-full focus:border focus:border-gray-400 outline-none text-sm;
 }
