@@ -3,9 +3,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark-alternate text-white mt-52">
-      <div className="container mx-auto">
-        <div className="flex justify-between pt-14 pb-24">
+    <footer className="bg-dark-alternate text-white">
+        <div className="container mx-auto flex justify-between pt-14 pb-24">
           <div className="w-105">
             <Image
               src="/images/logo-footer.svg"
@@ -33,7 +32,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      
       <div className="border-t border-t-white/15">
         <div className="container mx-auto py-6.5 flex justify-between">
           <div>SportsOn © 2025 All Rights Reserved.</div>
