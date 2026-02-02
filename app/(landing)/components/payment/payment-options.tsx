@@ -33,7 +33,7 @@ const PaymentOptions = async () => {
           <div className="self-center">
             <div className="font-bold">{payment.bankName}</div>
             <div className="text-sm">{payment.accountNumber}</div>
-            <div className="text-sm opacity-70">{payment.accountHolder}</div>
+            <div className="text-sm opacity-70">{payment.accountName}</div>
           </div>
           <div className="ml-auto bg-blue-50 text-gray-500 text-xs h-fit self-center px-2 py-1">
             Bank Transfer
