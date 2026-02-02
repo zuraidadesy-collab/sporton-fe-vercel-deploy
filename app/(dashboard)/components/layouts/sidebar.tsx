@@ -1,39 +1,55 @@
 "use client";
 
-import { link } from "fs";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { logout } from "@/app/services/auth.service";
 import Image from "next/image";
-import { use } from "react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import {
   FiBox,
   FiCreditCard,
   FiLayers,
-  FiLoader,
   FiLogOut,
   FiShoppingCart,
 } from "react-icons/fi";
 
 const Sidebar = () => {
   const pathname = usePathname();
+  const { push } = useRouter();
 
   const menuItems = [
-    { name: "Products", icon: FiBox, link: "/admin/products" },
-    { name: "Categories", icon: FiLayers, link: "/admin/categories" },
-    { name: "Transactions", icon: FiShoppingCart, link: "/admin/transactions" },
     {
-      name: "Banks Information",
+      name: "Products",
+      icon: FiBox,
+      link: "/admin/products",
+    },
+    {
+      name: "Categories",
+      icon: FiLayers,
+      link: "/admin/categories",
+    },
+    {
+      name: "Transactions",
+      icon: FiShoppingCart,
+      link: "/admin/transactions",
+    },
+    {
+      name: "Bank Information",
       icon: FiCreditCard,
       link: "/admin/bank-info",
     },
   ];
+
+  const handleLogout = () => {
+    logout();
+    push("/admin/login");
+  };
 
   return (
     <aside className="w-80 min-h-screen bg-white border-r border-gray-100 flex flex-col fixed left-0 top-0">
       <div className="py-8 px-14 border-b border-gray-200">
         <Image
           src="/images/logo-admin.svg"
-          alt="Logo Admin"
+          alt="logo admin"
           width={215}
           height={36}
         />
@@ -46,7 +62,9 @@ const Sidebar = () => {
             <Link
               href={item.link}
               key={index}
-              className={`flex items-center gap-3 px-4.5 py-3 rounded-lg font-medium duration-300 ${isActive ? "bg-primary-light text-primary" : "hover:bg-gray-100"} `}
+              className={`flex gap-3 items-center py-3 px-4.5 rounded-lg font-medium duration-300 ${
+                isActive ? "bg-primary/15 text-primary" : "hover:bg-gray-100"
+              }`}
             >
               <item.icon size={24} />
               <span>{item.name}</span>
@@ -54,13 +72,13 @@ const Sidebar = () => {
           );
         })}
       </div>
-      <Link
-        href="#"
-        className="flex gap-3 font-medium px-4.5 py-3 mx-5 hover:bg-gray-100 duration-300 rounded-lg mt-auto mb-10"
+      <button
+        className="flex gap-3 font-medium py-3 px-4.5 mx-5 hover:bg-gray-100 duration-300 rounded-lg mt-auto mb-10"
+        onClick={handleLogout}
       >
         <FiLogOut size={24} />
         Log Out
-      </Link>
+      </button>
     </aside>
   );
 };
